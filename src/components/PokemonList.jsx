@@ -36,14 +36,19 @@ function PokemonList() {
         onChange={(e) => setFiltro(e.target.value)}
         placeholder="Ex.: char"
       />
-      {listaFiltrada.map((pokemon) => (
-        <PokemonCard
-          key={pokemon.id}
-          id={pokemon.id}
-          name={pokemon.name}
-          type={pokemon.type}
-          imageUrl={pokemon.imageUrl} />
-      ))}
+      <p>Mostrando {listaFiltrada.length} Pokemons</p>
+      {listaFiltrada.length === 0 ? (
+        <p>Nenhum Pokemon encontrado para essa busca.</p>
+
+      ) :
+        listaFiltrada.map((pokemon) => (
+          <PokemonCard
+            key={pokemon.id}
+            id={pokemon.id}
+            name={pokemon.name}
+            type={pokemon.type}
+            imageUrl={pokemon.imageUrl} />
+        ))}
     </section>
   )
 }
