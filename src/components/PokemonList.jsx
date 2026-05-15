@@ -53,7 +53,7 @@ function PokemonList() {
       />
       <p>Mostrando {listaFiltrada.length} Pokemons</p>
       {listaFiltrada.length === 0 ? (
-        <p>Nenhum Pokemon encontrado para essa busca.</p>
+        <p>Nenhum Pokemon encontrado para essa busca. </p>
 
       ) :
         listaFiltrada.map((pokemon) => (
