@@ -1,37 +1,6 @@
 import PokemonCard from './PokemonCard'
 import { useState } from 'react'
-
-const POKEMONS = [
-  {
-    id: 25,
-    name: 'Pikachu',
-    type: 'Elétrico',
-    imageUrl:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png',
-  },
-  {
-    id: 1,
-    name: 'Bulbasaur',
-    type: 'Grama / Veneno',
-    imageUrl:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
-  },
-
-  {
-    id: 4,
-    name: 'Charmander',
-    type: 'Fogo',
-    imageUrl:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png',
-  },
-  {
-    id: 7,
-    name: 'Squirtle',
-    type: 'Água',
-    imageUrl:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png',
-  },
-]
+import {POKEMONS} from '../data/pokemons'
 
 function PokemonList() {
   const [pokemons] = useState(POKEMONS)
@@ -43,8 +12,10 @@ function PokemonList() {
 
   return (
     <section>
-      <label htmlFor="busca">Buscar por nome: </label>
-      <input
+      <label className="form-label" htmlFor="busca">
+        Buscar por nome: 
+      </label>
+      <input className='input'
         id="busca"
         type="search"
         value={filtro}

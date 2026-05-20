@@ -1,6 +1,7 @@
+import {Link} from 'react-router-dom'
 function PokemonCard({ id, name, type, imageUrl }) {
   return (
-
+    <Link to={`/pokemon/${id}`}>
 <div>
    <img src={imageUrl} alt={name} />
  <h2>
@@ -8,6 +9,7 @@ function PokemonCard({ id, name, type, imageUrl }) {
 </h2>
      <p>Tipo: {type}</p>
 </div>
+    </Link>
  )
 }
 
